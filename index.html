@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Артём — амбассадор «Магнит»</title>
+  <meta name="description" content="Личная страница-визитка: Артём, 19 лет, амбассадор «Магнит» (Краснодар). Контроль качества ФРЕШ, разработка сайтов и решения с ИИ." />
+
+  <link rel="icon" type="image/png" href="https://i.ibb.co/j9hLqJ3R/favicon.png" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Intro / Logo build -->
+  <div id="intro" class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <div class="logoBuild" role="img" aria-label="Логотип Магнит">
+        <svg class="logoBuild__svg" viewBox="0 0 200 200" aria-hidden="true">
+          <!-- Frame stroke draws first -->
+          <rect x="18" y="18" width="164" height="164" rx="38" ry="38" class="logoBuild__frame" />
+        </svg>
+
+        <div class="logoBuild__fill" aria-hidden="true"></div>
+        <img class="logoBuild__mark" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="200" height="200" alt="" decoding="async" />
+        <div class="logoBuild__shine" aria-hidden="true"></div>
+      </div>
+
+      <div class="intro__text">
+        <div class="intro__kicker">Амбассадор компании «Магнит»</div>
+        <div class="intro__name">Артём</div>
+        <div class="intro__tag">Краснодар • 19 лет • самый молодой амбассадор</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home" data-nav>
+        <img class="brand__logo" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="26" height="26" alt="" decoding="async" />
+        <span class="brand__text">Артём</span>
+        <span class="brand__sub">амбассадор «Магнит»</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#about" data-nav>Обо мне</a>
+        <a href="#ambassador" data-nav>Амбассадор</a>
+        <a href="#work" data-nav>Работа</a>
+        <a href="#skills" data-nav>Навыки</a>
+        <a href="#facts" data-nav>Факты</a>
+        <a href="#gallery" data-nav>Фото</a>
+        <a class="nav__cta" href="#contacts" data-nav>Контакты</a>
+      </nav>
+
+      <button class="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <div class="mobileMenu__inner">
+      <a href="#about" data-nav>Обо мне</a>
+      <a href="#ambassador" data-nav>Амбассадор</a>
+      <a href="#work" data-nav>Работа</a>
+      <a href="#skills" data-nav>Навыки</a>
+      <a href="#facts" data-nav>Факты</a>
+      <a href="#gallery" data-nav>Фото</a>
+      <a href="#contacts" data-nav>Контакты</a>
+      <div class="mobileMenu__hint">Нажми на раздел — откроется аккуратным скроллом.</div>
+    </div>
+  </div>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="section hero" aria-label="Главный экран">
+      <div class="container hero__grid">
+
+        <div class="hero__copy">
+          <div class="pillRow reveal" data-reveal>
+            <span class="pill">Амбассадор «Магнит»</span>
+            <span class="pill">19 лет</span>
+            <span class="pill">Краснодар</span>
+          </div>
+
+          <h1 class="hero__title reveal" data-reveal>
+            Артём
+          </h1>
+
+          <p class="hero__lead reveal" data-reveal>
+            Молодой сотрудник большой компании. Контролирую качество <b>ФРЕШ‑продукции</b> в департаменте дистанционной приёмки и параллельно делаю сайты и решения с ИИ.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal>
+            <a class="btn btn--primary" href="#contacts" data-nav>Связаться</a>
+            <a class="btn btn--ghost" href="#work" data-nav>Чем занимаюсь</a>
+            <a class="btn btn--ghost btn--pdf" href="assets/resume-artem.pdf" download>Скачать резюме (PDF)</a>
+          </div>
+
+          <div class="stats reveal" data-reveal>
+            <div class="stat">
+              <div class="stat__label">Статус</div>
+              <div class="stat__value">самый молодой амбассадор</div>
+            </div>
+            <div class="stat">
+              <div class="stat__label">MSFS + VATSIM</div>
+              <div class="stat__value"><span class="mono">2940</span> часов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__label">Каратэ</div>
+              <div class="stat__value"><span class="mono">12</span> лет дисциплины</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="parallaxWrap" data-parallax="0.12">
+        <div class="hero__media reveal" data-reveal>
+          <div class="portrait">
+            <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/Y7VqF69L/portrait-420.avif 420w, https://i.ibb.co/jvNkZqGQ/portrait-638.avif 638w" sizes="(max-width: 980px) 92vw, 520px">
+  <source type="image/webp" srcset="https://i.ibb.co/sdsFpZRJ/portrait-420.webp 420w, https://i.ibb.co/h1Xs3cwV/portrait-638.webp 638w" sizes="(max-width: 980px) 92vw, 520px">
+  <img src="https://i.ibb.co/CsmS4vxw/portrait.jpg" width="638" height="636" alt="Портрет Артёма" loading="eager" decoding="async" fetchpriority="high" />
+</picture>
+
+            <div class="bizCard">
+              <div class="bizCard__row">
+                <img class="bizCard__logo" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="20" height="20" alt="" decoding="async" />
+                <div class="bizCard__brand">Magnit</div>
+              </div>
+              <div class="bizCard__grid">
+                <div class="bizCard__k">Департамент</div>
+                <div class="bizCard__v">Дистанционная приёмка</div>
+                <div class="bizCard__k">Формат</div>
+                <div class="bizCard__v">ФРЕШ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__note">
+            <span class="dot"></span>
+            В фокусе каждый день: качество, порядок, скорость.
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-label="Обо мне">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Мини‑биография</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Коротко: от Рубцовска до Краснодара — и дальше по траектории роста.
+          </p>
+        </div>
+
+        <div class="wideCard reveal" data-reveal>
+          <div class="wideCard__media">
+            <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/nMbVjFbt/building-540.avif 540w, https://i.ibb.co/0yxMsJwv/building-900.avif 900w" sizes="(max-width: 980px) 92vw, 900px">
+  <source type="image/webp" srcset="https://i.ibb.co/fVJBMzn8/building-540.webp 540w, https://i.ibb.co/7J4vRCQ6/building-900.webp 900w" sizes="(max-width: 980px) 92vw, 900px">
+  <img src="https://i.ibb.co/wZYTkNpn/building.jpg" width="900" height="1600" alt="Здание" loading="lazy" decoding="async" />
+</picture>
+            <div class="wideCard__badge">Краснодар</div>
+          </div>
+
+          <div class="wideCard__body">
+            <div class="timeline">
+              <div class="tItem">
+                <div class="tItem__dot"></div>
+                <div class="tItem__title">Родился</div>
+                <div class="tItem__meta">Рубцовск</div>
+                <div class="tItem__text">Сибирский характер + любовь к дисциплине и системности.</div>
+              </div>
+              <div class="tItem">
+                <div class="tItem__dot"></div>
+                <div class="tItem__title">20.08.2020</div>
+                <div class="tItem__meta">переезд в Краснодар</div>
+                <div class="tItem__text">В 12 лет сменил город — и быстро адаптировался к южному ритму.</div>
+              </div>
+              <div class="tItem">
+                <div class="tItem__dot"></div>
+                <div class="tItem__title">Школа</div>
+                <div class="tItem__meta">№ 32, Краснодар</div>
+                <div class="tItem__text">Прокачал коммуникацию и привычку доводить дела до результата.</div>
+              </div>
+              <div class="tItem">
+                <div class="tItem__dot"></div>
+                <div class="tItem__title">Сейчас</div>
+                <div class="tItem__meta">РУК • Юрист</div>
+                <div class="tItem__text">Учусь на юриста в Российском университете кооперации.</div>
+              </div>
+              <div class="tItem">
+                <div class="tItem__dot"></div>
+                <div class="tItem__title">Спорт</div>
+                <div class="tItem__meta">каратэ</div>
+                <div class="tItem__text">Посвятил каратэ 12 лет — дисциплина, контроль и уважение к процессу.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AMBASSADOR -->
+    <section class="section" id="ambassador" aria-label="Амбассадор">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Амбассадор «Магнит»</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Для меня амбассадорство — про ценности бренда, людей и качество в деталях.
+          </p>
+        </div>
+
+        <div class="wideCard reveal" data-reveal>
+          <div class="wideCard__media">
+            <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/DDj3QYDr/ambassador-640.avif 640w, https://i.ibb.co/8g072CVb/ambassador-1280.avif 1280w" sizes="(max-width: 980px) 92vw, 900px">
+  <source type="image/webp" srcset="https://i.ibb.co/QjtN7gYR/ambassador-640.webp 640w, https://i.ibb.co/NdyFD3MB/ambassador-1280.webp 1280w" sizes="(max-width: 980px) 92vw, 900px">
+  <img src="https://i.ibb.co/xZrtKZQ/ambassador.png" width="1280" height="1280" alt="Вы амбассадоры компании Магнит" loading="lazy" decoding="async" />
+</picture>
+            <div class="wideCard__badge">Командный дух</div>
+          </div>
+
+          <div class="wideCard__body">
+            <div class="twoCol">
+              <div class="card">
+                <div class="card__title">Почему это важно</div>
+                <p class="card__text">
+                  Я за порядок в процессах и современный подход: когда технологии (включая ИИ) реально помогают работе.
+                  Мне близка идея «честного качества» — без компромиссов.
+                </p>
+              </div>
+              <div class="card">
+                <div class="card__title">Мой стиль</div>
+                <p class="card__text">
+                  Спокойная уверенность, внимание к стандартам, уважение к людям и ответственность за результат.
+                  Поэтому и говорю: меньше хаоса — больше успеха.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work" aria-label="Работа">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Работа</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Департамент дистанционной приёмки продукции: контроль качества ФРЕШ (фрукты и овощи).
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal" data-reveal>
+            <div class="card__title">Чем занимаюсь</div>
+            <ul class="list">
+              <li>Досмотр ФРЕШа на качество.</li>
+              <li>Фильтрация и сортировка нестандарта/брака.</li>
+              <li>Координация сотрудников РЦ по приёмке продукции (фрукты и овощи).</li>
+              <li>Контроль приёмки через камеры видеонаблюдения.</li>
+              <li>Проверка качества по установленным стандартам (ГОСТ и ТУ).</li>
+            </ul>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="card__title">Документы и стандарты</div>
+            <ul class="list">
+              <li>Консультации и контроль наличия товарно‑сопроводительной документации.</li>
+              <li>Работа с нормативно‑технической базой: ГОСТы, отраслевые стандарты, ТУ, законы и постановления.</li>
+              <li>Фиксация отклонений и понятная коммуникация для быстрого исправления.</li>
+            </ul>
+
+            <div class="miniCallout">
+              <span class="miniCallout__dot"></span>
+              <span>Там, где качество — всё решают детали.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-label="Навыки">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Навыки</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Комбинирую системность и технологии: сайты, дизайн, автоматизация и ИИ.
+          </p>
+        </div>
+
+        <div class="skillGrid">
+          <div class="skill reveal" data-reveal>
+            <div class="skill__title">Разработка сайтов</div>
+            <div class="skill__text">Лендинги, визитки, адаптив, анимации, аккуратная верстка.</div>
+          </div>
+          <div class="skill reveal" data-reveal>
+            <div class="skill__title">ИИ‑инструменты</div>
+            <div class="skill__text">Помогаю задачам работать быстрее: генерация, анализ, текст, идеи, автоматизация.</div>
+          </div>
+          <div class="skill reveal" data-reveal>
+            <div class="skill__title">Коммуникация</div>
+            <div class="skill__text">Чётко объясняю, быстро согласую, довожу до результата.</div>
+          </div>
+          <div class="skill reveal" data-reveal>
+            <div class="skill__title">Дисциплина</div>
+            <div class="skill__text">Каратэ 12 лет — это про характер, контроль и уважение к процессу.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACTS -->
+    <section class="section" id="facts" aria-label="Факты">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Факты обо мне</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Немного цифр и того, что меня характеризует.
+          </p>
+        </div>
+
+        <div class="facts">
+          <div class="factCard reveal" data-reveal>
+            <div class="factCard__big"><span class="mono">2940</span></div>
+            <div class="factCard__title">часов Microsoft Flight Simulator</div>
+            <div class="factCard__text">И все — в сети VATSIM. Люблю порядок, процедуры и точность.</div>
+          </div>
+
+          <div class="factCard reveal" data-reveal>
+            <div class="factCard__big"><span class="mono">12</span></div>
+            <div class="factCard__title">лет каратэ</div>
+            <div class="factCard__text">Это про дисциплину, уважение и работу над собой каждый день.</div>
+          </div>
+
+          <div class="factCard reveal" data-reveal>
+            <div class="factCard__big">∞</div>
+            <div class="factCard__title">любовь к чистой структуре</div>
+            <div class="factCard__text">Меньше хаоса — больше успеха. В дизайне, в процессах, в работе.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery" aria-label="Фото">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Фото</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Мерч, атмосфера и то, что отражает мой стиль.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <article class="gCard reveal" data-reveal>
+            <div class="gCard__media">
+              <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/nMbVjFbt/building-540.avif 540w, https://i.ibb.co/0yxMsJwv/building-900.avif 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <source type="image/webp" srcset="https://i.ibb.co/fVJBMzn8/building-540.webp 540w, https://i.ibb.co/7J4vRCQ6/building-900.webp 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <img src="https://i.ibb.co/wZYTkNpn/building.jpg" width="900" height="1600" alt="Офисное здание" loading="lazy" decoding="async" />
+</picture>
+            </div>
+            <div class="gCard__cap">Большая компания — большой масштаб.</div>
+          </article>
+
+          <article class="gCard reveal" data-reveal>
+            <div class="gCard__media">
+              <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/60QKh6fM/merch-hoodie-600.avif 600w, https://i.ibb.co/84YFnL5H/merch-hoodie-900.avif 900w, https://i.ibb.co/TxHR49dV/merch-hoodie-1328.avif 1328w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <source type="image/webp" srcset="https://i.ibb.co/XkxTGKGY/merch-hoodie-600.webp 600w, https://i.ibb.co/NXXSBS2/merch-hoodie-900.webp 900w, https://i.ibb.co/Xr0SbSGj/merch-hoodie-1328.webp 1328w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <img src="https://i.ibb.co/rK24cHZj/merch-hoodie.jpg" width="1328" height="1600" alt="Худи Less mess more success" loading="lazy" decoding="async" />
+</picture>
+            </div>
+            <div class="gCard__cap">Less mess — more success.</div>
+          </article>
+
+          <article class="gCard reveal" data-reveal>
+            <div class="gCard__media">
+              <picture>
+  <source type="image/avif" srcset="https://i.ibb.co/zHL7xMwh/merch-shirt-540.avif 540w, https://i.ibb.co/xKWTpXgs/merch-shirt-900.avif 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <source type="image/webp" srcset="https://i.ibb.co/5ZX5LsT/merch-shirt-540.webp 540w, https://i.ibb.co/ZRDrmSMT/merch-shirt-900.webp 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
+  <img src="https://i.ibb.co/PGpC40z4/merch-shirt.jpg" width="900" height="1600" alt="Футболка с принтом" loading="lazy" decoding="async" />
+</picture>
+            </div>
+            <div class="gCard__cap">Люблю чистый дизайн и ясную структуру.</div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KRASNODAR -->
+    <section class="section" id="krasnodar" aria-label="Краснодар">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2 reveal" data-reveal>Краснодар</h2>
+          <p class="sectionHead__sub reveal" data-reveal>
+            Мой город сейчас — тёплый ритм, рост, новые возможности.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal" data-reveal>
+            <div class="card__title">Откуда я</div>
+            <p class="card__text">
+              Родился в Рубцовске, а <b>20 августа 2020</b> переехал в Краснодар. С этого момента начался новый этап: учёба, работа и развитие.
+            </p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="card__title">Почему люблю этот город</div>
+            <p class="card__text">
+              Здесь комфортно расти: в учёбе, в работе и в личных проектах. Краснодар для меня — про движение вперёд.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section" id="contacts" aria-label="Контакты">
+      <div class="container">
+        <div class="contactCard reveal" data-reveal>
+          <div class="contactCard__left">
+            <h2 class="h2">Контакты</h2>
+            <p class="contactCard__text">
+              Напиши — обсудим идеи, проекты или сотрудничество.
+            </p>
+
+            <div class="contactLinks">
+              <a class="link" href="https://t.me/your_username" target="_blank" rel="noreferrer">Telegram</a>
+              <a class="link" href="mailto:you@example.com">Email</a>
+              <a class="link" href="https://vk.com/your_username" target="_blank" rel="noreferrer">VK</a>
+              <a class="link" href="https://github.com/your_username" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="contactActions">
+              <a class="btn btn--primary btn--pdf2" href="assets/resume-artem.pdf" download>Скачать резюме (PDF)</a>
+            </div>
+
+            <div class="contactHint">
+              <span class="dot"></span>
+              Замените ссылки на свои в <span class="mono">index.html</span> (раздел “Контакты”).
+            </div>
+          </div>
+
+          <div class="contactCard__right" aria-hidden="true">
+            <div class="contactMark">
+              <img src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="180" height="180" alt="" decoding="async" />
+            </div>
+            <div class="contactGlow"></div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div>© <span id="year"></span> Артём • Персональная визитка</div>
+          <div class="footer__small">Сделано в строгой палитре: бежевый • белый • красный • чёрный.</div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
