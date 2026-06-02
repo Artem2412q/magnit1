@@ -1,482 +1,408 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <title>Артём — амбассадор «Магнит»</title>
-  <meta name="description" content="Личная страница-визитка: Артём, 19 лет, амбассадор «Магнит» (Краснодар). Контроль качества ФРЕШ, разработка сайтов и решения с ИИ." />
-
-  <link rel="icon" type="image/png" href="https://i.ibb.co/j9hLqJ3R/favicon.png" />
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Артём Чепко — Амбассадор Магнит</title>
+  <meta name="description" content="Сайт-визитка амбассадора компании Магнит — Артём Чепко." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body class="is-locked">
-
-  <!-- Intro / Logo build -->
-  <div id="intro" class="intro" aria-hidden="true">
-    <div class="intro__inner">
-      <div class="logoBuild" role="img" aria-label="Логотип Магнит">
-        <svg class="logoBuild__svg" viewBox="0 0 200 200" aria-hidden="true">
-          <!-- Frame stroke draws first -->
-          <rect x="18" y="18" width="164" height="164" rx="38" ry="38" class="logoBuild__frame" />
-        </svg>
-
-        <div class="logoBuild__fill" aria-hidden="true"></div>
-        <img class="logoBuild__mark" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="200" height="200" alt="" decoding="async" />
-        <div class="logoBuild__shine" aria-hidden="true"></div>
-      </div>
-
-      <div class="intro__text">
-        <div class="intro__kicker">Амбассадор компании «Магнит»</div>
-        <div class="intro__name">Артём</div>
-        <div class="intro__tag">Краснодар • 19 лет • самый молодой амбассадор</div>
-      </div>
-    </div>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="preloader__mark">М</div>
+    <div class="preloader__text">загружаю сайт</div>
   </div>
 
-  <!-- Top bar -->
-  <header class="topbar" id="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#home" data-nav>
-        <img class="brand__logo" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="26" height="26" alt="" decoding="async" />
-        <span class="brand__text">Артём</span>
-        <span class="brand__sub">амбассадор «Магнит»</span>
-      </a>
+  <div class="noise"></div>
+  <div class="cursor" id="cursor"></div>
 
-      <nav class="nav" aria-label="Навигация">
-        <a href="#about" data-nav>Обо мне</a>
-        <a href="#ambassador" data-nav>Амбассадор</a>
-        <a href="#work" data-nav>Работа</a>
-        <a href="#skills" data-nav>Навыки</a>
-        <a href="#facts" data-nav>Факты</a>
-        <a href="#gallery" data-nav>Фото</a>
-        <a class="nav__cta" href="#contacts" data-nav>Контакты</a>
-      </nav>
+  <aside class="sidebar">
+    <a class="sidebar__logo magnetic" href="#top" aria-label="На главную">М</a>
 
-      <button class="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#mission">Миссия</a>
+      <a href="#gallery">Фотографии</a>
+      <a href="#news">Новости</a>
+      <a href="#contact">Контакты</a>
+      <a href="#resume">Резюме</a>
+    </nav>
+
+    <button class="theme-toggle magnetic" id="themeToggle" type="button" aria-label="Сменить тему">
+      <span class="theme-toggle__sun">☀</span>
+      <span class="theme-toggle__moon">☾</span>
+    </button>
+  </aside>
+
+  <header class="mobile-header">
+    <a class="mobile-header__logo" href="#top">М</a>
+    <button class="theme-toggle mobile-theme" id="mobileThemeToggle" type="button" aria-label="Сменить тему">
+      <span class="theme-toggle__sun">☀</span>
+      <span class="theme-toggle__moon">☾</span>
+    </button>
+    <a class="mobile-header__telegram" href="https://t.me/artem_myv" target="_blank" rel="noreferrer">@artem_myv</a>
   </header>
 
-  <!-- Mobile menu -->
-  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
-    <div class="mobileMenu__inner">
-      <a href="#about" data-nav>Обо мне</a>
-      <a href="#ambassador" data-nav>Амбассадор</a>
-      <a href="#work" data-nav>Работа</a>
-      <a href="#skills" data-nav>Навыки</a>
-      <a href="#facts" data-nav>Факты</a>
-      <a href="#gallery" data-nav>Фото</a>
-      <a href="#contacts" data-nav>Контакты</a>
-      <div class="mobileMenu__hint">Нажми на раздел — откроется аккуратным скроллом.</div>
-    </div>
-  </div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero__decor" aria-hidden="true">
+        <span class="orb orb--one"></span>
+        <span class="orb orb--two"></span>
+        <span class="orb orb--three"></span>
+        <span class="grid-lines"></span>
+      </div>
 
-  <main id="home">
+      <div class="hero__content reveal">
+        <div class="eyebrow"><span></span>Амбассадор компании Магнит</div>
 
-    <!-- HERO -->
-    <section class="section hero" aria-label="Главный экран">
-      <div class="container hero__grid">
+        <h1>
+          <span class="split-line">Артём</span>
+          <span class="split-line accent-text">Чепко</span>
+        </h1>
 
-        <div class="hero__copy">
-          <div class="pillRow reveal" data-reveal>
-            <span class="pill">Амбассадор «Магнит»</span>
-            <span class="pill">19 лет</span>
-            <span class="pill">Краснодар</span>
-          </div>
+        <p class="hero__text">
+          Сайт-визитка, где собраны моя история, новости, фотографии и опыт работы.
+          Показываю Магнит через личный пример, честный контент и развитие личного бренда.
+        </p>
 
-          <h1 class="hero__title reveal" data-reveal>
-            Артём
-          </h1>
-
-          <p class="hero__lead reveal" data-reveal>
-            Молодой сотрудник большой компании. Контролирую качество <b>ФРЕШ‑продукции</b> в департаменте дистанционной приёмки и параллельно делаю сайты и решения с ИИ.
-          </p>
-
-          <div class="hero__actions reveal" data-reveal>
-            <a class="btn btn--primary" href="#contacts" data-nav>Связаться</a>
-            <a class="btn btn--ghost" href="#work" data-nav>Чем занимаюсь</a>
-            <a class="btn btn--ghost btn--pdf" href="assets/resume-artem.pdf" download>Скачать резюме (PDF)</a>
-          </div>
-
-          <div class="stats reveal" data-reveal>
-            <div class="stat">
-              <div class="stat__label">Статус</div>
-              <div class="stat__value">самый молодой амбассадор</div>
-            </div>
-            <div class="stat">
-              <div class="stat__label">MSFS + VATSIM</div>
-              <div class="stat__value"><span class="mono">994</span> часов</div>
-            </div>
-            <div class="stat">
-              <div class="stat__label">Каратэ</div>
-              <div class="stat__value"><span class="mono">12</span> лет дисциплины</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="parallaxWrap" data-parallax="0.12">
-        <div class="hero__media reveal" data-reveal>
-          <div class="portrait">
-            <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/Y7VqF69L/portrait-420.avif 420w, https://i.ibb.co/jvNkZqGQ/portrait-638.avif 638w" sizes="(max-width: 980px) 92vw, 520px">
-  <source type="image/webp" srcset="https://i.ibb.co/sdsFpZRJ/portrait-420.webp 420w, https://i.ibb.co/h1Xs3cwV/portrait-638.webp 638w" sizes="(max-width: 980px) 92vw, 520px">
-  <img src="https://i.ibb.co/CsmS4vxw/portrait.jpg" width="638" height="636" alt="Портрет Артёма" loading="eager" decoding="async" fetchpriority="high" />
-</picture>
-
-            <div class="bizCard">
-              <div class="bizCard__row">
-                <img class="bizCard__logo" src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="20" height="20" alt="" decoding="async" />
-                <div class="bizCard__brand">Magnit</div>
-              </div>
-              <div class="bizCard__grid">
-                <div class="bizCard__k">Департамент</div>
-                <div class="bizCard__v">Дистанционная приёмка</div>
-                <div class="bizCard__k">Формат</div>
-                <div class="bizCard__v">ФРЕШ</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero__note">
-            <span class="dot"></span>
-            В фокусе каждый день: качество, порядок, скорость.
-          </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary magnetic" href="https://t.me/artem_myv" target="_blank" rel="noreferrer">
+            Мой Telegram
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 4.3 18.4 20c-.2 1-.8 1.2-1.6.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7L18 7.5c.4-.3-.1-.5-.5-.2L7 13.9 2.5 12.5c-1-.3-1-1 .2-1.4L20.2 4c.8-.3 1.6.2 1.5.3Z"/></svg>
+          </a>
+          <a class="btn btn--ghost magnetic" href="#resume">
+            Смотреть резюме
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7v-4H4v-6h9V5Z"/></svg>
+          </a>
         </div>
       </div>
 
+      <div class="hero__card tilt reveal">
+        <div class="profile-glow"></div>
+
+        <div class="avatar avatar--photo">
+          <img src="https://i.yapx.ru/dwgJD.png" alt="Фото Артёма Чепко">
+        </div>
+
+        <div class="status">
+          <span class="status__dot"></span>
+          развиваю бренд через личный пример
+        </div>
+
+        <h2>Чепко Артём Евгеньевич</h2>
+        <p>Амбассадор Магнита • @artem_myv</p>
+
+        <div class="stats">
+          <div>
+            <b data-count="7">0</b><span>+ месяцев в компании</span>
+          </div>
+          <div>
+            <b data-count="100">0</b><span>% вовлечённости</span>
+          </div>
+          <div>
+            <b data-count="2025">0</b><span>год старта</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about" aria-label="Обо мне">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Мини‑биография</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Коротко: от Алтая до Краснодара — и дальше по траектории роста.
-          </p>
-        </div>
+    <section id="about" class="section section--grid">
+      <article class="card card--big reveal">
+        <div class="card__tag">01 / обо мне</div>
+        <h2>Кто я</h2>
+        <p>
+          Я работаю в компании Магнит и являюсь участником Сообщества амбассадоров.
+          Для меня амбассадорство — это возможность рассказывать о компании через собственный пример:
+          через работу, развитие, ответственность и отношение к людям.
+        </p>
+        <p>
+          Я хочу показывать, что бренд работодателя строится не только большими проектами,
+          но и ежедневными действиями сотрудников, которые искренне вовлечены в то, что делают.
+        </p>
+      </article>
 
-        <div class="wideCard reveal" data-reveal>
-          <div class="wideCard__media">
-            <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/nMbVjFbt/building-540.avif 540w, https://i.ibb.co/0yxMsJwv/building-900.avif 900w" sizes="(max-width: 980px) 92vw, 900px">
-  <source type="image/webp" srcset="https://i.ibb.co/fVJBMzn8/building-540.webp 540w, https://i.ibb.co/7J4vRCQ6/building-900.webp 900w" sizes="(max-width: 980px) 92vw, 900px">
-  <img src="https://i.ibb.co/wZYTkNpn/building.jpg" width="900" height="1600" alt="Здание" loading="lazy" decoding="async" />
-</picture>
-            <div class="wideCard__badge">Краснодар</div>
-          </div>
-
-          <div class="wideCard__body">
-            <div class="timeline">
-              <div class="tItem">
-                <div class="tItem__dot"></div>
-                <div class="tItem__title">Родился</div>
-                <div class="tItem__meta">Рубцовск, Алтай</div>
-                <div class="tItem__text">Сибирский характер + любовь к дисциплине и системности.</div>
-              </div>
-              <div class="tItem">
-                <div class="tItem__dot"></div>
-                <div class="tItem__title">20.08.2020</div>
-                <div class="tItem__meta">переезд в Краснодар</div>
-                <div class="tItem__text">В 12 лет сменил город — и быстро адаптировался к южному ритму.</div>
-              </div>
-              <div class="tItem">
-                <div class="tItem__dot"></div>
-                <div class="tItem__title">Прежнее место работы</div>
-                <div class="tItem__meta">АО ТАНДЕР МАГНИТ У ДОМА</div>
-                <div class="tItem__text">Прокачал коммуникацию и привычку доводить дела до результата.</div>
-              </div>
-              <div class="tItem">
-                <div class="tItem__dot"></div>
-                <div class="tItem__title">Сейчас</div>
-                <div class="tItem__meta">РУК • Юрист</div>
-                <div class="tItem__text">Учусь на юриста в Российском университете кооперации.</div>
-              </div>
-              <div class="tItem">
-                <div class="tItem__dot"></div>
-                <div class="tItem__title">Спорт</div>
-                <div class="tItem__meta">каратэ</div>
-                <div class="tItem__text">Посвятил каратэ 12 лет — дисциплина, контроль и уважение к процессу.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <article class="card card--dark reveal">
+        <div class="card__icon">✦</div>
+        <h2>Главная задача амбассадора</h2>
+        <p>
+          Представлять компанию через личный пример, формировать положительный образ работодателя
+          и показывать реальные возможности для роста внутри Магнита.
+        </p>
+      </article>
     </section>
 
-    <!-- AMBASSADOR -->
-    <section class="section" id="ambassador" aria-label="Амбассадор">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Амбассадор «Магнит»</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Для меня амбассадорство — про ценности бренда, людей и качество в деталях.
+    <section id="mission" class="section">
+      <article class="mission reveal">
+        <div class="section-title">
+          <span>Почему я стал амбассадором</span>
+          <h2>Рост, ответственность и личный бренд</h2>
+        </div>
+
+        <div class="mission__text">
+          <p>
+            Я решил стать частью Сообщества амбассадоров, потому что хочу развивать не только бренд компании,
+            но и свой личный бренд. Для меня это история про рост, ответственность и про то, как ты показываешь себя людям.
+          </p>
+          <p>
+            Мне важно не стоять на месте, а мыслить шире, пробовать новое и развиваться во всех направлениях,
+            которые мне доступны. Я хочу расти вместе с Магнитом, усиливать его образ через себя, через свою жизнь,
+            через то, что делаю каждый день, и делать это искренне, чтобы людям это откликалось и было интересно.
           </p>
         </div>
+      </article>
+    </section>
 
-        <div class="wideCard reveal" data-reveal>
-          <div class="wideCard__media">
-            <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/DDj3QYDr/ambassador-640.avif 640w, https://i.ibb.co/8g072CVb/ambassador-1280.avif 1280w" sizes="(max-width: 980px) 92vw, 900px">
-  <source type="image/webp" srcset="https://i.ibb.co/QjtN7gYR/ambassador-640.webp 640w, https://i.ibb.co/NdyFD3MB/ambassador-1280.webp 1280w" sizes="(max-width: 980px) 92vw, 900px">
-  <img src="https://i.ibb.co/xZrtKZQ/ambassador.png" width="1280" height="1280" alt="Вы амбассадоры компании Магнит" loading="lazy" decoding="async" />
-</picture>
-            <div class="wideCard__badge">Командный дух</div>
+    <section id="strengths" class="section">
+      <div class="section-title reveal">
+        <span>Сильные стороны</span>
+        <h2>Что помогает мне быть полезным</h2>
+      </div>
+
+      <div class="strengths">
+        <article class="strength reveal tilt"><span>01</span><h3>Лидерство</h3><p>Беру ответственность и довожу идеи до результата.</p></article>
+        <article class="strength reveal tilt"><span>02</span><h3>Коммуникация</h3><p>Легко нахожу общий язык с коллегами и аудиторией.</p></article>
+        <article class="strength reveal tilt"><span>03</span><h3>Инициативность</h3><p>Предлагаю новые решения и не боюсь пробовать форматы.</p></article>
+        <article class="strength reveal tilt"><span>04</span><h3>Надёжность</h3><p>Держу слово, соблюдаю сроки и внимательно отношусь к деталям.</p></article>
+        <article class="strength reveal tilt"><span>05</span><h3>Развитие</h3><p>Постоянно учусь и беру максимум из возможностей вокруг.</p></article>
+        <article class="strength reveal tilt"><span>06</span><h3>Открытость</h3><p>Готов делиться опытом, поддерживать людей и развивать сообщество.</p></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-title reveal">
+        <span>Фотографии</span>
+        <h2>Моменты, которые говорят больше текста</h2>
+      </div>
+
+      <div class="gallery reveal">
+        <div class="gallery__stage">
+          <button class="gallery__arrow gallery__arrow--prev magnetic" id="galleryPrev" type="button" aria-label="Предыдущее фото">‹</button>
+
+          <div class="gallery__viewport">
+            <div class="gallery__track" id="galleryTrack">
+              <figure class="gallery__slide is-active">
+                <img src="https://i.imgur.com/HLZBhwZ.jpeg" alt="Фото 1">
+                <figcaption>Конец стажировки</figcaption>
+              </figure>
+              <figure class="gallery__slide">
+                <img src="https://i.imgur.com/98IxgSc.jpeg" alt="Фото 2">
+                <figcaption>Команда и развитие</figcaption>
+              </figure>
+              <figure class="gallery__slide">
+                <img src="https://i.imgur.com/2Vud4GM.jpeg" alt="Фото 3">
+                <figcaption>Капсула времени</figcaption>
+              </figure>
+              <figure class="gallery__slide">
+                <img src="https://i.imgur.com/Sj23HGO.jpeg" alt="Фото 4">
+                <figcaption>Что то на красивом</figcaption>
+              </figure>
+            </div>
           </div>
 
-          <div class="wideCard__body">
-            <div class="twoCol">
-              <div class="card">
-                <div class="card__title">Почему это важно</div>
-                <p class="card__text">
-                  Я за порядок в процессах и современный подход: когда технологии (включая ИИ) реально помогают работе.
-                  Мне близка идея «честного качества» — без компромиссов.
-                </p>
+          <button class="gallery__arrow gallery__arrow--next magnetic" id="galleryNext" type="button" aria-label="Следующее фото">›</button>
+        </div>
+
+        <div class="gallery__bottom">
+          <div class="gallery__counter"><span id="galleryCurrent">01</span> / 04</div>
+          <div class="gallery__dots" id="galleryDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="section-title reveal">
+        <span>Новости</span>
+        <h2>Публикации и обновления</h2>
+      </div>
+
+      <div class="news">
+        <article class="telegram-card reveal">
+          <div class="telegram-card__icon">↗</div>
+          <h3>Новости из Telegram</h3>
+          <p>
+            Основной поток новостей в Telegram, а на сайте лучшие публикации,
+            важные события и личные заметки.
+          </p>
+          <a class="magnetic" href="https://t.me/artem_myv" target="_blank" rel="noreferrer">Перейти в Telegram</a>
+        </article>
+
+        <button class="news-card reveal" type="button"
+          data-title="Я стал частью ретейла Магнит"
+          data-date="7 августа 2025"
+          data-text="Для меня это новый этап роста, ответственности и развития личного бренда вместе с компанией. Я хочу показывать Магнит через себя, через свои ежедневные действия, через честные истории и полезный контент.">
+          <time>7 августа 2025 года</time>
+          <h3>Я стал частью ретейла "МАГНИТ"</h3>
+          <p>Нажми, чтобы открыть публикацию полностью.</p>
+        </button>
+
+        <button class="news-card reveal" type="button"
+          data-title="Почему важно рассказывать о компании через людей"
+          data-date="20 мая 2026 года"
+          data-text="Настоящий бренд работодателя строится на искренних историях сотрудников. Людям интересно видеть не только официальные новости, но и реальную жизнь компании через тех, кто находится внутри процесса.">
+          <time>20 мая 2026</time>
+          <h3>Почему важно рассказывать о компании через людей</h3>
+          <p>Нажми, чтобы открыть публикацию полностью.</p>
+        </button>
+
+        <button class="news-card reveal" type="button"
+          data-title="Мой фокус на этот год"
+          data-date="27 мая 2026"
+          data-text="Больше контента, больше инициатив, больше пользы для коллег и тех, кто только знакомится с Магнитом. Хочу расти вместе с компанией и усиливать её образ через личный пример.">
+          <time>27 мая 2026</time>
+          <h3>Мой фокус на этот год</h3>
+          <p>Нажми, чтобы открыть публикацию полностью.</p>
+        </button>
+      </div> </div> 
+      </div> </div> 
+    </section>
+</div> ⠀</div> 
+</div> ⠀</div> 
+    <section id="contact" class="contact reveal">
+      <div class="contact__shine"></div>
+      <span>Контакты</span>
+      <h2>Следите за моими новостями</h2>
+      <p>Публикации, фотографии, личный опыт и жизнь амбассадора Магнита — в моём Telegram.</p>
+      <a class="btn btn--primary magnetic" href="https://t.me/artem_myv" target="_blank" rel="noreferrer">
+        @artem_myv
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 4.3 18.4 20c-.2 1-.8 1.2-1.6.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7L18 7.5c.4-.3-.1-.5-.5-.2L7 13.9 2.5 12.5c-1-.3-1-1 .2-1.4L20.2 4c.8-.3 1.6.2 1.5.3Z"/></svg>
+      </a>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="section-title reveal">
+        <span>Моё резюме</span>
+        <h2>Опыт работы, навыки и профессиональный профиль</h2>
+      </div>
+
+      <div class="resume-grid">
+        <article class="resume-summary reveal">
+          <div class="resume-summary__header">
+            <div>
+              <div class="resume-badge">АО ТАНДЕР</div>
+              <h3>Профиль: аудит, приёмка и контроль качества</h3>
+            </div>
+            <div class="pro-pill">PRO</div>
+          </div>
+
+          <p>
+            Опыт работы связан с координацией процессов приёмки продукции, контролем качества фруктов и овощей,
+            аудитом и работой с большим форматом задач. Сильная сторона — сочетание внимательности,
+            аналитического подхода и умения быстро ориентироваться в документации и процессах.
+          </p>
+
+          <div class="resume-chips">
+            <span>MS Excel</span>
+            <span>Аудит</span>
+            <span>ГОСТ / ТУ</span>
+            <span>Качество ФРОВ</span>
+            <span>TRASSIR</span>
+            <span>Многозадачность</span>
+          </div>
+        </article>
+
+        <article class="resume-timeline reveal">
+          <h3>Опыт работы</h3>
+
+          <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__body">
+              <span class="timeline-item__date">07.08.2025 — ноябрь 2025</span>
+              <h4>АО ТАНДЕР</h4>
+              <p>Первый период работы в компании. Формирование практического опыта контроля приёмки, качества продукции и сопровождения процессов.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__body">
+              <span class="timeline-item__date">12.02.2026 — настоящее время</span>
+              <h4>АО ТАНДЕР</h4>
+              <p>Текущий период работы. Фокус на аудите, большом формате задач, координации сотрудников и контроле соответствия установленным стандартам.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="resume-duties reveal">
+          <h3>Ключевые обязанности</h3>
+          <ul>
+            <li>Координация работы сотрудников РЦ по приёмке продукции.</li>
+            <li>Контроль приёмки фруктов и овощей через камеры видеонаблюдения.</li>
+            <li>Проверка качества продукции по стандартам ГОСТ и ТУ.</li>
+            <li>Контроль наличия товарно-сопроводительной документации.</li>
+            <li>Работа с нормативно-технической документацией: ГОСТы, отраслевые стандарты, ТУ, законы и постановления.</li>
+            <li>Работа с аудитом и задачами большого формата.</li>
+          </ul>
+        </article>
+
+        <article class="resume-skills reveal" id="skillsPanel">
+          <div class="skills-visual">
+            <div class="resume-gauge" data-progress="90">
+              <div class="resume-gauge__inner">
+                <b class="resume-gauge__value">0%</b>
+                <span>Общее значение</span>
               </div>
-              <div class="card">
-                <div class="card__title">Мой стиль</div>
-                <p class="card__text">
-                  Спокойная уверенность, внимание к стандартам, уважение к людям и ответственность за результат.
-                  Поэтому и говорю: меньше хаоса — больше успеха.
-                </p>
-              </div>
+            </div>
+
+            <div class="skills-note">
+              <h3>Уверенный рабочий инструментарий</h3>
+              <p>
+                Уверенно использую MS Office, в том числе Excel: таблицы, систематизация данных,
+                контроль информации и работа с отчётностью.
+              </p>
             </div>
           </div>
-        </div>
 
+          <div class="skill-bars">
+            <div class="skill-bar" data-progress="95">
+              <div class="skill-bar__head"><span>MS Excel / таблицы</span><b>95%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+
+            <div class="skill-bar" data-progress="95">
+              <div class="skill-bar__head"><span>Аудит и контроль качества</span><b>95%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+
+            <div class="skill-bar" data-progress="92">
+              <div class="skill-bar__head"><span>Работа с документацией</span><b>92%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+
+            <div class="skill-bar" data-progress="90">
+              <div class="skill-bar__head"><span>Аналитический склад ума</span><b>90%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+
+            <div class="skill-bar" data-progress="91">
+              <div class="skill-bar__head"><span>Многозадачность</span><b>91%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+
+            <div class="skill-bar" data-progress="80">
+              <div class="skill-bar__head"><span>TRASSIR</span><b>80%</b></div>
+              <div class="skill-bar__track"><span></span></div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="section" id="work" aria-label="Работа">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Работа</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Департамент дистанционной приёмки продукции: контроль качества ФРЕШ (фрукты и овощи).
-          </p>
-        </div>
-
-        <div class="grid2">
-          <div class="card reveal" data-reveal>
-            <div class="card__title">Чем занимаюсь</div>
-            <ul class="list">
-              <li>Досмотр ФРЕШа на качество.</li>
-              <li>Фильтрация и сортировка нестандарта/брака.</li>
-              <li>Координация сотрудников РЦ по приёмке продукции (фрукты и овощи).</li>
-              <li>Контроль приёмки через камеры видеонаблюдения.</li>
-              <li>Проверка качества по установленным стандартам (ГОСТ и ТУ).</li>
-            </ul>
-          </div>
-
-          <div class="card reveal" data-reveal>
-            <div class="card__title">Документы и стандарты</div>
-            <ul class="list">
-              <li>Консультации и контроль наличия товарно‑сопроводительной документации.</li>
-              <li>Работа с нормативно‑технической базой: ГОСТы, отраслевые стандарты, ТУ, законы и постановления.</li>
-              <li>Фиксация отклонений и понятная коммуникация для быстрого исправления.</li>
-            </ul>
-
-            <div class="miniCallout">
-              <span class="miniCallout__dot"></span>
-              <span>Там, где качество — всё решают детали.</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills" aria-label="Навыки">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Навыки</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Комбинирую системность и технологии: сайты, дизайн, автоматизация и ИИ.
-          </p>
-        </div>
-
-        <div class="skillGrid">
-          <div class="skill reveal" data-reveal>
-            <div class="skill__title">Разработка сайтов</div>
-            <div class="skill__text">Лендинги, визитки, адаптив, анимации, аккуратная верстка.</div>
-          </div>
-          <div class="skill reveal" data-reveal>
-            <div class="skill__title">ИИ‑инструменты</div>
-            <div class="skill__text">Помогаю задачам работать быстрее: генерация, анализ, текст, идеи, автоматизация.</div>
-          </div>
-          <div class="skill reveal" data-reveal>
-            <div class="skill__title">Коммуникация</div>
-            <div class="skill__text">Чётко объясняю, быстро согласую, довожу до результата.</div>
-          </div>
-          <div class="skill reveal" data-reveal>
-            <div class="skill__title">Дисциплина</div>
-            <div class="skill__text">Каратэ 12 лет — это про характер, контроль и уважение к процессу.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FACTS -->
-    <section class="section" id="facts" aria-label="Факты">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Факты обо мне</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Немного цифр и того, что меня характеризует.
-          </p>
-        </div>
-
-        <div class="facts">
-          <div class="factCard reveal" data-reveal>
-            <div class="factCard__big"><span class="mono">994</span></div>
-            <div class="factCard__title">часов Microsoft Flight Simulator</div>
-            <div class="factCard__text">И все — в сети VATSIM. Люблю порядок, процедуры и точность.</div>
-          </div>
-
-          <div class="factCard reveal" data-reveal>
-            <div class="factCard__big"><span class="mono">12</span></div>
-            <div class="factCard__title">лет каратэ</div>
-            <div class="factCard__text">Это про дисциплину, уважение и работу над собой каждый день.</div>
-          </div>
-
-          <div class="factCard reveal" data-reveal>
-            <div class="factCard__big">∞</div>
-            <div class="factCard__title">любовь к чистой структуре</div>
-            <div class="factCard__text">Меньше хаоса — больше успеха. В дизайне, в процессах, в работе.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section" id="gallery" aria-label="Фото">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Фото</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Мерч, атмосфера и то, что отражает мой стиль.
-          </p>
-        </div>
-
-        <div class="gallery">
-          <article class="gCard reveal" data-reveal>
-            <div class="gCard__media">
-              <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/nMbVjFbt/building-540.avif 540w, https://i.ibb.co/0yxMsJwv/building-900.avif 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <source type="image/webp" srcset="https://i.ibb.co/fVJBMzn8/building-540.webp 540w, https://i.ibb.co/7J4vRCQ6/building-900.webp 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <img src="https://i.ibb.co/wZYTkNpn/building.jpg" width="900" height="1600" alt="Офисное здание" loading="lazy" decoding="async" />
-</picture>
-            </div>
-            <div class="gCard__cap">Большая компания — большой масштаб.</div>
-          </article>
-
-          <article class="gCard reveal" data-reveal>
-            <div class="gCard__media">
-              <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/60QKh6fM/merch-hoodie-600.avif 600w, https://i.ibb.co/84YFnL5H/merch-hoodie-900.avif 900w, https://i.ibb.co/TxHR49dV/merch-hoodie-1328.avif 1328w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <source type="image/webp" srcset="https://i.ibb.co/XkxTGKGY/merch-hoodie-600.webp 600w, https://i.ibb.co/NXXSBS2/merch-hoodie-900.webp 900w, https://i.ibb.co/Xr0SbSGj/merch-hoodie-1328.webp 1328w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <img src="https://i.ibb.co/rK24cHZj/merch-hoodie.jpg" width="1328" height="1600" alt="Худи Less mess more success" loading="lazy" decoding="async" />
-</picture>
-            </div>
-            <div class="gCard__cap">Less mess — more success.</div>
-          </article>
-
-          <article class="gCard reveal" data-reveal>
-            <div class="gCard__media">
-              <picture>
-  <source type="image/avif" srcset="https://i.ibb.co/zHL7xMwh/merch-shirt-540.avif 540w, https://i.ibb.co/xKWTpXgs/merch-shirt-900.avif 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <source type="image/webp" srcset="https://i.ibb.co/5ZX5LsT/merch-shirt-540.webp 540w, https://i.ibb.co/ZRDrmSMT/merch-shirt-900.webp 900w" sizes="(max-width: 560px) 92vw, (max-width: 980px) 46vw, 380px">
-  <img src="https://i.ibb.co/PGpC40z4/merch-shirt.jpg" width="900" height="1600" alt="Футболка с принтом" loading="lazy" decoding="async" />
-</picture>
-            </div>
-            <div class="gCard__cap">Люблю чистый дизайн и ясную структуру.</div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- KRASNODAR -->
-    <section class="section" id="krasnodar" aria-label="Краснодар">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2 reveal" data-reveal>Краснодар</h2>
-          <p class="sectionHead__sub reveal" data-reveal>
-            Мой город сейчас — тёплый ритм, рост, новые возможности.
-          </p>
-        </div>
-
-        <div class="grid2">
-          <div class="card reveal" data-reveal>
-            <div class="card__title">Откуда я</div>
-            <p class="card__text">
-              Родился на Алтае, а <b>20 августа 2020</b> переехал в Краснодар. С этого момента начался новый этап: учёба, работа и развитие.
-            </p>
-          </div>
-          <div class="card reveal" data-reveal>
-            <div class="card__title">Почему люблю этот город</div>
-            <p class="card__text">
-              Здесь комфортно расти: в учёбе, в работе и в личных проектах. Краснодар для меня — про движение вперёд.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS -->
-    <section class="section" id="contacts" aria-label="Контакты">
-      <div class="container">
-        <div class="contactCard reveal" data-reveal>
-          <div class="contactCard__left">
-            <h2 class="h2">Контакты</h2>
-            <p class="contactCard__text">
-              Напиши — обсудим идеи, проекты или сотрудничество.
-            </p>
-
-            <div class="contactLinks">
-              <a class="link" href="https://t.me/artem_myv" target="_blank" rel="noreferrer">Telegram</a>
-              <a class="link" href="artemcepko69@gmail.com">Email</a>
-              <a class="link" href="https://vk.com/artem_chepko" target="_blank" rel="noreferrer">VK</a>
-            </div>
-            <div class="contactActions">
-              <a class="btn btn--primary btn--pdf2" href="assets/resume-artem.pdf" download>Скачать резюме (PDF)</a>
-            </div>
-
-            <div class="contactHint">
-              <span class="dot"></span>
-              Я стараюсь отвечать на коммерческие предложения в моём почтовом ящике или Telegram.
-            </div>
-          </div>
-
-          <div class="contactCard__right" aria-hidden="true">
-            <div class="contactMark">
-              <img src="https://i.ibb.co/1tpnmV5z/magnit-logo.png" width="180" height="180" alt="" decoding="async" />
-            </div>
-            <div class="contactGlow"></div>
-          </div>
-        </div>
-
-        <footer class="footer">
-          <div>© <span id="year"></span> Артём • Персональная визитка</div>
-          <div class="footer__small">АО "ТАНДЕР" специальная визитка для амбассадора компании Магнит.</div>
-        </footer>
-      </div>
-    </section>
-
+    <footer>
+      <span>© 2026 Артём Чепко</span>
+      <span>Сайт-визитка амбассадора Магнит</span>
+    </footer>
   </main>
 
-  <script src="script.js"></script>
+  <div class="modal" id="postModal" aria-hidden="true">
+    <div class="modal__overlay" data-close-modal></div>
+    <article class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close magnetic" type="button" data-close-modal aria-label="Закрыть">×</button>
+      <time id="modalDate"></time>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </article>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
